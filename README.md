@@ -2,7 +2,7 @@
 
 The parent company's site. It lists every Uncs Group paper (Outdoor Unc and
 Finance Unc today) and is built to take more: sports, entertainment, hobbies,
-news or anything else. Plain static HTML. No build step, no database, no API.
+news or anything else. Plain static HTML. No build step, no database, no API. 
 
 ```
 public/index.html      the page (both logos are inlined in it)
