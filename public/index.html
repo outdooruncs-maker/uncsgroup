@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Uncs Group","url":"https://www.uncsgroup.com/","email":"ogunc@uncsgroup.com","logo":"https://www.uncsgroup.com/assets/icon-512.png","brand":[{"@type":"Brand","name":"News Unc","url":"https://www.newsunc.com/"},{"@type":"Brand","name":"Outdoor Unc","url":"https://www.outdoorunc.com/"},{"@type":"Brand","name":"Finance Unc","url":"https://www.financeunc.com/"},{"@type":"Brand","name":"Sports Unc","url":"https://www.sportsunc.com/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Uncs Group","url":"https://www.uncsgroup.com/","email":"ogunc@uncsgroup.com","logo":"https://www.uncsgroup.com/assets/icon-512.png","brand":[{"@type":"Brand","name":"News Unc","url":"https://www.newsunc.com/"},{"@type":"Brand","name":"Outdoor Unc","url":"https://www.outdoorunc.com/"},{"@type":"Brand","name":"Finance Unc","url":"https://www.financeunc.com/"},{"@type":"Brand","name":"Sports Unc","url":"https://www.sportsunc.com/"},{"@type":"Brand","name":"Game Unc","url":"https://www.gameunc.com/"},{"@type":"Brand","name":"Fun Unc","url":"https://www.fununc.com/"}]}</script>
 <style>
 :root{
   --page:#fafaf8; --ink:#16181b; --meta:#5b6068; --rule:#d9dbde; --bg:#fafaf8;
@@ -68,6 +68,14 @@ a{color:inherit}
 .news::before{background-image:
   linear-gradient(180deg,transparent 0 20px,rgba(122,31,61,.30) 20px 22px,transparent 22px),
   repeating-linear-gradient(90deg,transparent 0 69px,rgba(122,31,61,.07) 69px 70px)}
+.game{--card:#fbfafd;--edge:#e2ddee;--accent:#5b3fd1;--ink:#1f1a1c;--meta:#5a5052;--bg:#fbfafd;--brand:#5b3fd1}
+.game::before{background-image:
+  linear-gradient(rgba(91,63,209,.08) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(91,63,209,.08) 1px,transparent 1px);background-size:18px 18px}
+.fun{--card:#f9fcfb;--edge:#d6e6e3;--accent:#0f766e;--ink:#1f1a1c;--meta:#5a5052;--bg:#f9fcfb;--brand:#0f766e}
+.fun::before{background-image:radial-gradient(rgba(15,118,110,.14) 1.3px,transparent 1.5px);background-size:16px 16px}
+.soon{position:absolute;top:18px;right:18px;font-family:var(--display);font-weight:700;font-size:14px;letter-spacing:.08em;
+  text-transform:uppercase;color:#fff;background:var(--accent);padding:4px 10px;border-radius:4px}
 .foot{border-top:1px solid var(--rule);padding:22px 0 30px;color:var(--meta);font-size:15px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .foot p{margin:0;max-width:62ch}
 .foot a{color:var(--ink)}
@@ -311,10 +319,36 @@ a{color:inherit}
     <p class="beats">Schedules, results, rule changes and championships across baseball, basketball, football, hockey, soccer, tennis, golf, pickleball, running, swimming and cycling, checked with the league or governing body.</p>
     <span class="go">Read Sports Unc</span>
   </a>
+  <a class="paper game" href="https://www.gameunc.com/" aria-label="Game Unc: games, esports and trading cards, coming soon">
+    <span class="soon">Coming soon</span>
+    <svg class="logo" focusable="false" viewBox="0 0 440 118" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+  <title>Game Unc</title>
+  <desc>A pixel square marked GU, with a lighter pixel in the corner.</desc>
+  <g transform="translate(14 14) scale(0.9)"><path d="M6 0H94V6H100V94H94V100H6V94H0V6H6Z" fill="var(--brand)"/><rect x="82" y="0" width="18" height="18" fill="#BDB2EE"/><g transform="translate(17 29) scale(0.428571)" fill="#ffffff"><rect x="14" y="0" width="42" height="14"/><rect x="0" y="14" width="14" height="70"/><rect x="56" y="14" width="14" height="14"/><rect x="28" y="42" width="42" height="14"/><rect x="56" y="56" width="14" height="28"/><rect x="14" y="84" width="42" height="14"/><rect x="84" y="0" width="14" height="84"/><rect x="140" y="0" width="14" height="84"/><rect x="98" y="84" width="42" height="14"/></g></g>
+  <text x="124" y="76" fill="var(--ink)" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="800" font-size="66" letter-spacing="1">GAME UNC</text>
+  <text x="126" y="98" fill="var(--meta)" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="600" font-size="14" letter-spacing="2.2">YOUR DAILY LOOT DROP</text>
+</svg>
+    <p class="promise">Read it before you press start.</p>
+    <p class="beats">New releases and delays, buy-wait-or-skip verdicts, esports results, trading card sets, board games and miniatures, and deals worth grabbing, with patch notes in plain English.</p>
+    <span class="go">Coming soon to gameunc.com</span>
+  </a>
+  <a class="paper fun" href="https://www.fununc.com/" aria-label="Fun Unc: travel, food and things to do, coming soon">
+    <span class="soon">Coming soon</span>
+    <svg class="logo" focusable="false" viewBox="0 0 440 118" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+  <title>Fun Unc</title>
+  <desc>A luggage tag marked F.</desc>
+  <g transform="translate(14 14) scale(0.9)"><path d="M30 4H92A4 4 0 0 1 96 8V92A4 4 0 0 1 92 96H8A4 4 0 0 1 4 92V30Z" fill="var(--brand)"/><circle cx="27" cy="27" r="7" fill="#9FC8C5"/><path d="M42 24H80V38H58V50H76V64H58V84H42Z" fill="#ffffff"/></g>
+  <text x="124" y="76" fill="var(--ink)" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="800" font-size="66" letter-spacing="1">FUN UNC</text>
+  <text x="126" y="98" fill="var(--meta)" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="600" font-size="14" letter-spacing="2.2">PLANS FOR THE FUN STUFF</text>
+</svg>
+    <p class="promise">Read it before your day off.</p>
+    <p class="beats">Weekend plans, food guides, shows and on-sales, theme parks, cruises and trips, plus a Trip Hub that keeps every flight, hotel and reservation in one place.</p>
+    <span class="go">Coming soon to fununc.com</span>
+  </a>
 </main>
 
 <footer class="foot">
-  <p>News Unc, Outdoor Unc, Finance Unc and Sports Unc are independent papers published under the Uncs Group name. Corrections run as dated notes on the story they fix.</p>
+  <p>News Unc, Outdoor Unc, Finance Unc and Sports Unc are independent papers published under the Uncs Group name, with Game Unc and Fun Unc coming soon. Corrections run as dated notes on the story they fix.</p>
   <p>Contact Uncs Group: <a href="mailto:ogunc@uncsgroup.com">ogunc@uncsgroup.com</a><br>Story corrections and tips: use the contact page of <a href="https://www.newsunc.com/contact/">News Unc</a>, <a href="https://www.outdoorunc.com/contact/">Outdoor Unc</a>, <a href="https://www.financeunc.com/contact/">Finance Unc</a> or <a href="https://www.sportsunc.com/contact/">Sports Unc</a>.</p>
 </footer>
 </div>
