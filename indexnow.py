@@ -87,7 +87,12 @@ def fetch(url):
 def live_state(base, key):
     """(sitemap of the live site, whether the key file is live). Raises if the site can't be read."""
     stamp = int(time.time())
-    key_ok = fetch(f"{base}/{key}.txt?t={stamp}").strip() == key
+    try:
+        key_ok = fetch(f"{base}/{key}.txt?t={stamp}").strip() == key
+    except urllib.error.HTTPError as e:
+        if e.code != 404:
+            raise
+        key_ok = False               # not deployed yet
     return parse_sitemap(fetch(f"{base}/sitemap.xml?t={stamp}")), key_ok
 
 
@@ -126,11 +131,19 @@ def submit(host, key, urls):
                            "urlList": urls[i:i + 10000]}).encode()
         req = urllib.request.Request(ENDPOINT, data=body, method="POST", headers={
             "Content-Type": "application/json; charset=utf-8", "User-Agent": UA})
-        try:
-            with urllib.request.urlopen(req, timeout=60) as r:
-                code = r.status
-        except urllib.error.HTTPError as e:
-            sys.exit(f"IndexNow refused the request: HTTP {e.code} {e.read().decode('utf-8', 'replace')[:300]}")
+        for attempt in range(1, 9):
+            try:
+                with urllib.request.urlopen(req, timeout=60) as r:
+                    code = r.status
+                break
+            except urllib.error.HTTPError as e:
+                detail = e.read().decode("utf-8", "replace")[:300]
+                # A new key takes IndexNow a few minutes to verify; 429 is "slow down". Both pass.
+                if attempt < 8 and (e.code == 429 or "SiteVerificationNotCompleted" in detail):
+                    print(f"  IndexNow is not ready (HTTP {e.code}); trying again in 90 seconds")
+                    time.sleep(90)
+                    continue
+                sys.exit(f"IndexNow refused the request: HTTP {e.code} {detail}")
         print(f"  sent {len(urls[i:i + 10000])} addresses: HTTP {code}")
 
 
