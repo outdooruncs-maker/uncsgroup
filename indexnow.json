@@ -1,0 +1,8 @@
+{
+  "host": "www.uncsgroup.com",
+  "key": "942e2640e8cc2dff6633b495d4ced28d",
+  "sitemap": "public/sitemap.xml",
+  "always": [
+    "https://www.uncsgroup.com/"
+  ]
+}

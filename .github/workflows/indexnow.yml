@@ -1,0 +1,39 @@
+# IndexNow: after every push to main, tell Bing, Yandex, Naver, Seznam and the
+# other IndexNow search engines which pages are new, changed or removed.
+#
+# indexnow.py compares the sitemap of the pushed commit with the one before it,
+# waits until Cloudflare has the new pages live, then sends the addresses in a
+# single request. No secrets are needed: the key in indexnow.json is public and
+# is served at /<key>.txt on the site.
+#
+# To resend every page (after a redesign, say): Actions > IndexNow > Run
+# workflow, and tick "Send every page".
+
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      all:
+        description: "Send every page, not only what changed"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install what the site build needs
+        run: if [ -f requirements.txt ]; then pip install -q -r requirements.txt; fi
+      - name: Send changed pages to IndexNow
+        run: python3 indexnow.py --before "${{ github.event.before }}" ${{ inputs.all && '--all' || '' }}
