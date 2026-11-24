@@ -62,7 +62,7 @@ PAPERS = {
 }
 
 # ---------------------------------------------------------------------- today
-DATE = "2026-11-23"
+DATE = "2026-11-24"
 
 # One entry per paper, in the order you'll post them (the page shows the last one first).
 # "story" is the id in that paper's edition file.
@@ -72,112 +72,112 @@ DATE = "2026-11-23"
 POSTS = [
     {
         "paper": "outdoor",
-        "story": "s-west-coast-king-tides-high-surf-warnings-thanksgiving-week",
-        "kicker": "Surf warning",
+        "story": "s-field-notes-first-ice-four-inches",
+        "kicker": "Ice safety",
         "stats": [
-            ("30 ft", "Breakers forecast around San Francisco and Monterey Bay"),
-            ("8.5 ft", "Predicted SF tide Wednesday, near the all-time record"),
-            ("3.1 ft", "Flooding possible on Oregon's south coast"),
+            ("4 in", "Minimum new, clear ice to walk on; under that, stay off"),
+            ("2x", "As thick on white ice, which is about half as strong"),
+            ("9–10 in", "Clear ice needed for a small car or SUV"),
         ],
         "caption": (
-            "The year's highest tides are landing on top of a big storm swell. The Weather Service has "
-            "coastal flood warnings from San Diego to the Oregon coast, and a high surf warning for "
-            "20- to 30-foot breakers around San Francisco and Monterey Bay Tuesday night into Wednesday.\n\n"
-            "Stay off beaches, jetties and rocks around the late-morning high tides, and expect flooded "
-            "coastal roads. This is a week for watching, not paddling out.\n\n"
+            "First ice is showing up on ponds across the north, right as kids are home for Thanksgiving. "
+            "The Minnesota DNR's rule for new, clear ice: under 4 inches, stay off.\n\n"
+            "Ice can be two feet thick in one spot and an inch thick a few yards away, and white ice is about "
+            "half as strong as clear ice. Wear a foam life jacket this time of year, tell someone where you're "
+            "going, and check your own state's conditions before you step out.\n\n"
             "Full story from Outdoor Unc: link in bio.\n\n"
-            "#kingtides #surf #mavericks #californiacoast #oregoncoast #outdoorunc"
+            "#icesafety #firstice #icefishing #minnesota #outdoorunc"
         ),
     },
     {
         "paper": "fun",
-        "story": "s-delta-cancellations-spill-into-monday-thanksgiving-week",
+        "story": "s-thanksgiving-sunday-tsa-3-million-busiest-days-2026",
         "kicker": "Thanksgiving travel",
         "stats": [
-            ("92", "Delta mainline flights canceled by 7:15 a.m. Monday"),
-            ("2,100+", "Delta departures delayed during Sunday's outage"),
-            ("6 in 10", "Delta mainline flights delayed Sunday"),
+            ("3M+", "People TSA could screen on Sunday, Nov. 29"),
+            ("3.13M", "Screened the Sunday after Thanksgiving last year, a record then"),
+            ("2–3 hrs", "How early TSA says to get to Atlanta's airport"),
         ],
         "caption": (
-            "Delta's Sunday meltdown spilled into Monday: at least 92 mainline cancellations by breakfast, "
-            "after a weight-and-balance system failure delayed more than 2,100 departures on Sunday.\n\n"
-            "Flying anywhere this week? Turn on alerts in your airline's app, check your flight before you "
-            "leave home, and rebook in the app while you wait in line. If an airline cancels and you decide "
-            "not to go, U.S. rules say you're owed a cash refund.\n\n"
+            "Flying home Sunday? So is everyone else. TSA says it could screen more than 3 million people "
+            "on Sunday, Nov. 29, and Tuesday and Wednesday are crunch days too.\n\n"
+            "The move: fly home Saturday or Monday if you can. If you can't, book the first flight of the "
+            "morning, check in on the app, and get there early, with snacks.\n\n"
             "Full story from Fun Unc: link in bio.\n\n"
-            "#thanksgivingtravel #delta #traveltips #airtravel #fununc"
+            "#thanksgivingtravel #TSA #traveltips #airtravel #fununc"
         ),
     },
     {
         "paper": "sports",
-        "story": "s-stellantis-peugeot-quits-wec-citroen-opel-formula-e",
+        "story": "s-davis-cup-final-8-2026-opens-bologna-czechia-canada",
+        "kicker": "Davis Cup",
         "stats": [
-            ("0", "WEC race wins for the Peugeot 9X8 Hypercar"),
-            ("~300", "Jobs tied to the programs, per Le Figaro"),
-            ("2027", "Citroën and Opel's last Formula E season"),
+            ("4th", "Straight title Italy is chasing, without Sinner"),
+            ("$1.5M", "Prize money for the champion nation"),
+            ("Nov. 29", "The final in Bologna, 3 p.m. local time"),
         ],
         "caption": (
-            "Peugeot is out of the World Endurance Championship, effective now. Stellantis is pulling back "
-            "from factory motorsport: the 9X8 Hypercar program stops immediately, and Citroën and Opel will "
-            "leave Formula E after the 2027 season.\n\n"
-            "The 9X8 never won a WEC race. Dodge's 2027 NASCAR Cup return isn't affected.\n\n"
+            "The Davis Cup Final 8 is underway in Bologna. Czechia and Canada opened it today, and hosts "
+            "Italy go for a fourth straight title without Jannik Sinner, who had knee surgery Tuesday.\n\n"
+            "Germany has world No. 1 Alexander Zverev, and Spain says Carlos Alcaraz will play, though he may "
+            "be rested early. The final is Sunday, Nov. 29.\n\n"
             "Full story from Sports Unc: link in bio.\n\n"
-            "#WEC #Peugeot #FormulaE #Hypercar #motorsport #sportsunc"
+            "#DavisCup #tennis #Alcaraz #Zverev #sportsunc"
         ),
     },
     {
         "paper": "news",
-        "story": "s-iran-vows-all-means-counter-us-naval-blockade",
+        "story": "s-who-h5n1-washington-dairy-workers-one-death",
+        "kicker": "Bird flu",
         "stats": [
-            ("July 14", "U.S. restored the blockade of Iranian ports"),
-            ("2 days", "How soon Iran says Hormuz could reopen, on its terms"),
-            ("Near 0", "Iran's visible crude exports"),
+            ("3", "Human H5N1 cases among Yakima County dairy workers"),
+            ("1", "Death, a patient with underlying conditions"),
+            ("75", "U.S. human H5 infections since February 2024, per CDC"),
         ],
         "caption": (
-            "Iran says it will use \"all available means\" against the U.S. naval blockade of its ports, "
-            "calling it military aggression. President Trump says he's inclined to order new strikes after "
-            "the new year if no deal is reached.\n\n"
-            "Iran says the Strait of Hormuz could reopen within two days if Washington lifts the blockade "
-            "and waives sanctions.\n\n"
+            "The WHO reported three human H5N1 bird flu cases in Washington state, all adult dairy-farm "
+            "workers in Yakima County. One patient, who had underlying conditions, died Nov. 1; the other "
+            "two had mild illness.\n\n"
+            "The WHO says there's no evidence so far of person-to-person spread and rates the risk to the "
+            "general public as low.\n\n"
             "Full story from News Unc: link in bio.\n\n"
-            "#Iran #StraitOfHormuz #worldnews #newsunc"
+            "#birdflu #H5N1 #publichealth #Washington #newsunc"
         ),
     },
     {
         "paper": "game",
-        "story": "s-gta-vi-45-million-alinea-circana-launch-day",
-        "kicker": "GTA VI",
+        "story": "s-verdict-nioh-3-steam-black-friday-35",
+        "kicker": "Buy, wait or skip",
         "stats": [
-            ("44.9M", "Copies sold launch weekend, by Alinea's estimate"),
-            ("61%", "U.S. PS5 players who played it on day one"),
-            ("513 min", "Average day-one PS5 play time"),
+            ("$34.99", "Nioh 3 on Steam, half its $69.99 list price"),
+            ("88", "OpenCritic score, tied for the series best"),
+            ("Jan. 28", "Xbox Complete Edition, with both DLCs"),
         ],
         "caption": (
-            "GTA VI may already be past 45 million copies. Research firm Alinea Analytics estimates 44.9 "
-            "million sold over launch weekend, 75% of them on PS5. It's an estimate; Rockstar hasn't "
-            "confirmed it.\n\n"
-            "Circana says 61% of U.S. PS5 players fired it up on Nov. 19, for an average of 513 minutes. "
-            "On a Thursday.\n\n"
+            "Buy, wait or skip: Nioh 3 at $35 on Steam is a buy. Team Ninja's samurai slasher is half off on "
+            "PC, and it sits at 88 on OpenCritic, matching the first Nioh.\n\n"
+            "On Xbox? Wait for the Complete Edition with both DLCs on Jan. 28. Our call is based on the "
+            "reviews and the price; we haven't played it.\n\n"
             "Full story from Game Unc: link in bio.\n\n"
-            "#GTA6 #GTAVI #RockstarGames #PS5 #Xbox #gameunc"
+            "#Nioh3 #SteamDeals #BlackFriday #TeamNinja #gameunc"
         ),
     },
     {
         "paper": "finance",
-        "story": "s-nvidia-reinstates-jensen-huang-ceo-nov-23",
-        "kicker": "Nvidia",
+        "story": "s-williams-inflation-3-5-percent-actions-over-time",
+        "kicker": "The Fed",
         "stats": [
-            ("+27%", "Nvidia shares before Monday's open, to $159.48"),
-            ("11 days", "Between Huang's resignation and his return"),
-            ("Dec. 1", "Huang's closed-door interview with House committees"),
+            ("3.5%", "Inflation now, by Williams' estimate"),
+            ("2%", "The Fed's goal; he sees it reached in 2028"),
+            ("Dec. 9", "The Fed's next rate decision"),
         ],
         "caption": (
-            "Jensen Huang is back. Eleven days after he resigned, Nvidia's board voted unanimously to "
-            "reinstate him as CEO, saying it concluded his return poses no national security risk. An "
-            "independent investigation continues.\n\n"
-            "Shares traded about 27% higher before Monday's open.\n\n"
+            "New York Fed President John Williams says inflation is about 3.5%, well above the Fed's 2% goal, "
+            "and that the Fed \"must take actions over time\" to bring it down. Some read that as a hint at "
+            "higher rates; he didn't say so.\n\n"
+            "He pointed to the AI buildout pushing up chip prices. The Fed's next rate decision is Dec. 9.\n\n"
             "Full story from Finance Unc: link in bio.\n\n"
-            "#Nvidia #JensenHuang #stocks #investing #financeunc"
+            "#FederalReserve #inflation #interestrates #economy #financeunc"
         ),
     },
 ]
