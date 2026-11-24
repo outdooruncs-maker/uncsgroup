@@ -16,6 +16,22 @@ public/assets/         logos, favicon, share image (og.png)
 To change the wording, edit `public/index.html` on GitHub and commit; Cloudflare
 redeploys in under a minute.
 
+## Instagram posts and the link-in-bio page (/ig)
+
+`make_posts.py` makes the day's 1080x1350 posts for @uncs_group (one story per
+paper: photo with its credit, kicker, headline, three stats, the paper's logo and
+"Full story: link in bio"), the captions, and the page at www.uncsgroup.com/ig/
+that lists every posted story, newest first, with the same images.
+
+1. The six paper repos sit next to this one (`../outdoor-unc`, `../fununc`, ...).
+2. Edit `DATE` and `POSTS` at the top of `make_posts.py`.
+3. `pip install pillow resvg-py`, then `python make_posts.py`.
+4. Post the images in `public/ig/` with the captions in `captions/<date>.md`,
+   then commit and push so the /ig page updates.
+
+Stories without a photo, and creator video stills, are refused. Fonts are in
+`tools/fonts/` (SIL Open Font License).
+
 ## The logo
 
 The Uncs Group mark is the stache: a single handlebar moustache. It is Unc, the

@@ -1,0 +1,80 @@
+[
+ {
+  "date": "2026-11-23",
+  "order": 5,
+  "paper": "finance",
+  "paper_name": "Finance Unc",
+  "accent": "#1d4e89",
+  "story": "s-nvidia-reinstates-jensen-huang-ceo-nov-23",
+  "headline": "Nvidia's Board Reinstates Jensen Huang as CEO; Shares Jump Before the Open",
+  "url": "https://www.financeunc.com/investing/nvidia-s-board-reinstates-jensen-huang-as-ceo-shares-jump-before-the/",
+  "image": "2026-11-23-finance.jpg",
+  "alt": "Finance Unc: Nvidia's Board Reinstates Jensen Huang as CEO; Shares Jump Before the Open. Photo: The entrance to Nvidia's Endeavor headquarters building in Santa Clara, California, with a sign reading Nvidia 2788 beside wide concrete steps",
+  "credit": "Photo: Coolcaesar, CC BY-SA 4.0, via Wikimedia Commons"
+ },
+ {
+  "date": "2026-11-23",
+  "order": 4,
+  "paper": "game",
+  "paper_name": "Game Unc",
+  "accent": "#5b3fd1",
+  "story": "s-gta-vi-45-million-alinea-circana-launch-day",
+  "headline": "GTA VI May Already Be Past 45 Million Copies, One Research Firm Says",
+  "url": "https://www.gameunc.com/video-games/gta-vi-may-already-be-past-45-million-copies-one-research-firm-says/",
+  "image": "2026-11-23-game.jpg",
+  "alt": "Game Unc: GTA VI May Already Be Past 45 Million Copies, One Research Firm Says. Photo: Grand Theft Auto VI key art: panels of Lucia, Jason and other characters, a speedboat, cars and a helicopter around the GTA VI logo",
+  "credit": "Image: Rockstar Games"
+ },
+ {
+  "date": "2026-11-23",
+  "order": 3,
+  "paper": "news",
+  "paper_name": "News Unc",
+  "accent": "#7a1f3d",
+  "story": "s-iran-vows-all-means-counter-us-naval-blockade",
+  "headline": "Iran Vows to Use 'All Available Means' Against the U.S. Blockade",
+  "url": "https://www.newsunc.com/world/iran-vows-to-use-all-available-means-against-the-u-s-blockade/",
+  "image": "2026-11-23-news.jpg",
+  "alt": "News Unc: Iran Vows to Use 'All Available Means' Against the U.S. Blockade. Photo: A cargo ship on the horizon of a gray sea, seen past a ship's railing and a navigation instrument on a warship's deck.",
+  "credit": "Photo: U.S. Navy"
+ },
+ {
+  "date": "2026-11-23",
+  "order": 2,
+  "paper": "sports",
+  "paper_name": "Sports Unc",
+  "accent": "#b3261e",
+  "story": "s-stellantis-peugeot-quits-wec-citroen-opel-formula-e",
+  "headline": "Peugeot Quits Endurance Racing as Stellantis Pulls Back From Motorsport",
+  "url": "https://www.sportsunc.com/motorsport/peugeot-quits-endurance-racing-as-stellantis-pulls-back-from-motorsport/",
+  "image": "2026-11-23-sports.jpg",
+  "alt": "Sports Unc: Peugeot Quits Endurance Racing as Stellantis Pulls Back From Motorsport. Photo: The black, white and red No. 93 Peugeot 9X8 Hypercar on track at Spa-Francorchamps",
+  "credit": "Photo: MarcelX42, CC BY-SA 4.0, via Wikimedia Commons"
+ },
+ {
+  "date": "2026-11-23",
+  "order": 1,
+  "paper": "fun",
+  "paper_name": "Fun Unc",
+  "accent": "#0f766e",
+  "story": "s-delta-cancellations-spill-into-monday-thanksgiving-week",
+  "headline": "Delta's Sunday Mess Spilled Into Monday. Here's How to Fly Smart This Week",
+  "url": "https://www.fununc.com/trips/delta-s-sunday-mess-spilled-into-monday-here-s-how-to-fly-smart-this/",
+  "image": "2026-11-23-fun.jpg",
+  "alt": "Fun Unc: Delta's Sunday Mess Spilled Into Monday. Here's How to Fly Smart This Week. Photo: An airport screen listing Delta departures, times and gates",
+  "credit": "Photo: Stinger20, CC BY-SA 4.0"
+ },
+ {
+  "date": "2026-11-23",
+  "order": 0,
+  "paper": "outdoor",
+  "paper_name": "Outdoor Unc",
+  "accent": "#d24a0b",
+  "story": "s-west-coast-king-tides-high-surf-warnings-thanksgiving-week",
+  "headline": "Near-Record King Tides and 30-Foot Surf Due on West Coast This Week",
+  "url": "https://www.outdoorunc.com/surfing/near-record-king-tides-and-30-foot-surf-due-on-west-coast-this-week/",
+  "image": "2026-11-23-outdoor.jpg",
+  "alt": "Outdoor Unc: Near-Record King Tides and 30-Foot Surf Due on West Coast This Week. Photo: A surfer in a red jersey and helmet drops down the face of a huge curling wave at Mavericks",
+  "credit": "Photo: Jacobovs, CC BY-SA 3.0, via Wikimedia Commons"
+ }
+]
