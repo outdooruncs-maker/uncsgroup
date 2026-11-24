@@ -32,6 +32,35 @@ that lists every posted story, newest first, with the same images.
 Stories without a photo, and creator video stills, are refused. Fonts are in
 `tools/fonts/` (SIL Open Font License).
 
+### Posting to Instagram
+
+After the push, `make_posts.py` can post the day's images itself through Meta's
+official Instagram API:
+
+```
+python make_posts.py --publish              # dry run: shows what would post
+python make_posts.py --publish --go         # posts the six, in POSTS order
+python make_posts.py --publish --go --carousel   # or one carousel of all six
+```
+
+It checks each image is live on www.uncsgroup.com first, and records what went
+out in `captions/published.json`, so running it twice never posts a day twice.
+
+One-time setup (about 15 minutes):
+1. @uncs_group must be a Business or Creator account (Instagram app -> Settings
+   -> Account type and tools).
+2. developers.facebook.com -> My Apps -> Create app -> use case "Manage messaging
+   & content on Instagram" (type Business). In the app, open Instagram ->
+   "API setup with Instagram business login".
+3. Under "Generate access tokens", add @uncs_group and log in to Instagram when
+   asked. Copy the token it shows (it starts with `IG`). The app can stay in
+   development mode: it only posts to accounts you add here.
+4. Save the token on this PC only, never in the repo. In PowerShell:
+   `[Environment]::SetEnvironmentVariable('IG_ACCESS_TOKEN', '<token>', 'User')`
+   then open a new terminal.
+
+The token lasts 60 days. Generate a new one the same way before it runs out.
+
 ## The logo
 
 The Uncs Group mark is the stache: a single handlebar moustache. It is Unc, the

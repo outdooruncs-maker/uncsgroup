@@ -495,7 +495,7 @@ def main():
                     "alt": f"{p['name']}: {head}. Photo: {story['image'].get('alt', '')}".strip(),
                     "credit": story["image"]["credit"]})
         md.append(f"## {i + 1}. {p['name']}: {head}\n\nImage: `public/ig/{name}`  \nStory: {story['_url']}\n\n"
-                  f"```\n{post['caption']}\n\nPhoto: {story['image']['credit'].removeprefix('Photo: ').removeprefix('Image: ')}\n```\n")
+                  f"```\n{full_caption(post, story)}\n```\n")
         print(f"  {name}  ->  {story['_url']}")
 
     # POSTS is the order you post them in, so the last one is the newest: show it first
@@ -506,5 +506,155 @@ def main():
     print(f"  public/ig/index.html ({len(posts)} posts), captions/{DATE}.md")
 
 
+def full_caption(post, story):
+    return f"{post['caption']}\n\n{story['image']['credit']}"
+
+
+# ------------------------------------------------------------------ publish
+# Posts the day's images to Instagram through Meta's official Graph API.
+# Needs, in the environment (never in this file):
+#   IG_ACCESS_TOKEN   a token with instagram_business_content_publish (Instagram
+#                     login, starts "IG...") or instagram_content_publish (Facebook login)
+#   IG_USER_ID        optional; looked up from the token if missing
+# Images are fetched by Instagram from www.uncsgroup.com/ig/, so commit and push first.
+import os
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+
+SITE_IG = "https://www.uncsgroup.com/ig/"
+PUBLISHED = HERE / "captions" / "published.json"  # what has gone out, so nothing posts twice
+
+
+def graph(method, path, token, **params):
+    host = "graph.instagram.com" if token.startswith("IG") else "graph.facebook.com"
+    version = os.environ.get("IG_GRAPH_VERSION", "v23.0")
+    params["access_token"] = token
+    data = urllib.parse.urlencode(params).encode()
+    url = f"https://{host}/{version}/{path}"
+    if method == "GET":
+        req = urllib.request.Request(f"{url}?{data.decode()}")
+    else:
+        req = urllib.request.Request(url, data=data, method="POST")
+    req.add_header("User-Agent", "uncsgroup-make-posts")
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", "replace")
+        sys.exit(f"Instagram API error on {path}: {e.code} {body.replace(token, '<token>')}")
+
+
+def ig_user_id(token):
+    if os.environ.get("IG_USER_ID"):
+        return os.environ["IG_USER_ID"]
+    if token.startswith("IG"):
+        me = graph("GET", "me", token, fields="user_id,username")
+        print(f"  Instagram account: @{me.get('username')}")
+        return me["user_id"]
+    pages = graph("GET", "me/accounts", token, fields="name,instagram_business_account{id,username}")
+    for pg in pages.get("data", []):
+        acct = pg.get("instagram_business_account")
+        if acct:
+            print(f"  Instagram account: @{acct.get('username')} (via Page {pg.get('name')})")
+            return acct["id"]
+    sys.exit("No Instagram professional account is linked to this token's Facebook Pages.")
+
+
+def wait_ready(container, token):
+    for _ in range(30):
+        st = graph("GET", container, token, fields="status_code,status")
+        if st.get("status_code") == "FINISHED":
+            return
+        if st.get("status_code") in ("ERROR", "EXPIRED"):
+            sys.exit(f"Instagram could not process {container}: {st}")
+        time.sleep(5)
+    sys.exit(f"Instagram still processing {container} after 150s; try again later.")
+
+
+def publish(go, carousel):
+    items = []
+    for post in POSTS:
+        story = load_story(post)
+        name = f"{DATE}-{post['paper']}.jpg"
+        local = OUT / name
+        url = SITE_IG + name
+        try:
+            # Cloudflare turns away Python's default user agent
+            req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "Mozilla/5.0 (compatible; uncsgroup-make-posts)"})
+            with urllib.request.urlopen(req, timeout=30) as r:
+                live = int(r.headers.get("Content-Length") or -1)
+        except urllib.error.URLError as e:
+            sys.exit(f"{url} is not live ({e}); commit and push first.")
+        if live not in (-1, local.stat().st_size):
+            sys.exit(f"{url} on the site differs from public/ig/{name}; push the latest images first.")
+        items.append((post, story, url))
+
+    done = json.loads(PUBLISHED.read_text(encoding="utf-8")) if PUBLISHED.exists() else {}
+    already = done.get(DATE, {})
+    todo = [(p, s, u) for p, s, u in items if p["paper"] not in already and not (carousel and already)]
+    if not todo:
+        print(f"  Nothing to post: {DATE} is already on Instagram ({', '.join(already)}).")
+        return
+
+    print(f"  {'One carousel of' if carousel else 'Separate posts for'} {len(todo)} image(s), in this order:")
+    for p, s, u in todo:
+        print(f"   - {PAPERS[p['paper']]['name']}: {u}")
+    if carousel:
+        print("  Carousel caption: the first post's caption, then a line for each of the others.")
+    if not go:
+        print("  Dry run: nothing posted. Add --go to post for real.")
+        return
+
+    token = os.environ.get("IG_ACCESS_TOKEN", "").strip()
+    if not token:
+        sys.exit("Set IG_ACCESS_TOKEN first (see README: Posting to Instagram).")
+    uid = ig_user_id(token)
+    limit = graph("GET", f"{uid}/content_publishing_limit", token, fields="quota_usage,config")
+    print(f"  Publishing limit: {json.dumps(limit.get('data', limit))}")
+
+    def record(paper, media_id):
+        done.setdefault(DATE, {})[paper] = media_id
+        PUBLISHED.write_text(json.dumps(done, indent=1) + "\n", encoding="utf-8")
+
+    if carousel:
+        children = []
+        for p, s, u in todo:
+            c = graph("POST", f"{uid}/media", token, image_url=u, is_carousel_item="true")["id"]
+            wait_ready(c, token)
+            children.append(c)
+        first_post, first_story, _ = todo[0]
+        others = "\n".join(f"{i + 2}. {PAPERS[p['paper']]['name']}: {p.get('headline') or s['headline']}"
+                           for i, (p, s, _) in enumerate(todo[1:]))
+        credits = "\n".join(f"{PAPERS[p['paper']]['name']}: {s['image']['credit']}" for p, s, _ in todo)
+        caption = f"{first_post['caption']}\n\nAlso today:\n{others}\n\n{credits}"
+        c = graph("POST", f"{uid}/media", token, media_type="CAROUSEL", children=",".join(children), caption=caption)["id"]
+        wait_ready(c, token)
+        media = graph("POST", f"{uid}/media_publish", token, creation_id=c)["id"]
+        for p, _, _ in todo:
+            record(p["paper"], media)
+        print(f"  Posted carousel: media id {media}")
+        return
+
+    for p, s, u in todo:
+        c = graph("POST", f"{uid}/media", token, image_url=u, caption=full_caption(p, s))["id"]
+        wait_ready(c, token)
+        media = graph("POST", f"{uid}/media_publish", token, creation_id=c)["id"]
+        record(p["paper"], media)
+        print(f"  Posted {PAPERS[p['paper']]['name']}: media id {media}")
+        time.sleep(3)
+
+
 if __name__ == "__main__":
-    main()
+    import argparse
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--publish", action="store_true",
+                    help="post today's images to Instagram instead of rendering (a dry run unless --go)")
+    ap.add_argument("--go", action="store_true", help="with --publish: really post")
+    ap.add_argument("--carousel", action="store_true", help="with --publish: one carousel post instead of six")
+    args = ap.parse_args()
+    if args.publish:
+        publish(args.go, args.carousel)
+    else:
+        main()
