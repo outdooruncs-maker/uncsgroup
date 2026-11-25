@@ -62,7 +62,7 @@ PAPERS = {
 }
 
 # ---------------------------------------------------------------------- today
-DATE = "2026-11-24"
+DATE = "2026-11-25"
 
 # One entry per paper, in the order you'll post them (the page shows the last one first).
 # "story" is the id in that paper's edition file.
@@ -72,112 +72,115 @@ DATE = "2026-11-24"
 POSTS = [
     {
         "paper": "outdoor",
-        "story": "s-field-notes-first-ice-four-inches",
-        "kicker": "Ice safety",
+        "story": "s-shenandoah-wildfire-closes-skyline-drive-appalachian-trail-nov-24",
+        "kicker": "Wildfire",
         "stats": [
-            ("4 in", "Minimum new, clear ice to walk on; under that, stay off"),
-            ("2x", "As thick on white ice, which is about half as strong"),
-            ("9–10 in", "Clear ice needed for a small car or SUV"),
+            ("25 mi", "Of Skyline Drive closed, mile 79.5 to Rockfish Gap"),
+            ("4.2 mi", "Of the Appalachian Trail shut, Sawmill Run to Beagle Gap"),
+            ("Nov. 21", "Parkwide fire ban in force since, for very dry conditions"),
         ],
         "caption": (
-            "First ice is showing up on ponds across the north, right as kids are home for Thanksgiving. "
-            "The Minnesota DNR's rule for new, clear ice: under 4 inches, stay off.\n\n"
-            "Ice can be two feet thick in one spot and an inch thick a few yards away, and white ice is about "
-            "half as strong as clear ice. Wear a foam life jacket this time of year, tell someone where you're "
-            "going, and check your own state's conditions before you step out.\n\n"
+            "A wildfire has closed the south end of Skyline Drive in Shenandoah National Park, from the "
+            "Loft Mountain gate to Rockfish Gap, plus about four miles of the Appalachian Trail. "
+            "No reopening date yet.\n\n"
+            "The rest of the drive is open; heading south, leave the park at Swift Run Gap (U.S. 33). "
+            "A parkwide fire ban is in force, and you can get closure alerts by texting SHENALERTS to 888777.\n\n"
             "Full story from Outdoor Unc: link in bio.\n\n"
-            "#icesafety #firstice #icefishing #minnesota #outdoorunc"
+            "#shenandoah #skylinedrive #appalachiantrail #wildfire #outdoorunc"
         ),
     },
     {
         "paper": "fun",
-        "story": "s-thanksgiving-sunday-tsa-3-million-busiest-days-2026",
-        "kicker": "Thanksgiving travel",
+        "story": "s-macys-parade-100th-balloons-wind-decision-thursday",
+        "kicker": "Macy's Parade",
+        "focus": (0.5, 0.4),
         "stats": [
-            ("3M+", "People TSA could screen on Sunday, Nov. 29"),
-            ("3.13M", "Screened the Sunday after Thanksgiving last year, a record then"),
-            ("2–3 hrs", "How early TSA says to get to Atlanta's airport"),
+            ("100", "Inflatables, a record, for the parade's 100th"),
+            ("34 mph", "Gusts above this keep the big balloons low or grounded"),
+            ("8:30 a.m.", "Thursday start, Eastern; the wind call comes that morning"),
         ],
         "caption": (
-            "Flying home Sunday? So is everyone else. TSA says it could screen more than 3 million people "
-            "on Sunday, Nov. 29, and Tuesday and Wednesday are crunch days too.\n\n"
-            "The move: fly home Saturday or Monday if you can. If you can't, book the first flight of the "
-            "morning, check in on the app, and get there early, with snacks.\n\n"
+            "The Macy's Thanksgiving Day Parade turns 100 tomorrow with a record 100 inflatables, "
+            "including a new Bluey and Sorcerer's Apprentice Mickey. The catch: forecast gusts are right "
+            "around the 34 mph line that keeps the big balloons low or on the ground.\n\n"
+            "Macy's makes the call Thursday morning. In New York today? Balloon inflation is free, 1 to 6 p.m., "
+            "entry at West 72nd and Columbus.\n\n"
             "Full story from Fun Unc: link in bio.\n\n"
-            "#thanksgivingtravel #TSA #traveltips #airtravel #fununc"
+            "#macysparade #thanksgiving #nyc #macysthanksgivingdayparade #fununc"
         ),
     },
     {
         "paper": "sports",
-        "story": "s-davis-cup-final-8-2026-opens-bologna-czechia-canada",
-        "kicker": "Davis Cup",
+        "story": "s-steelers-bench-aaron-rodgers-mason-rudolph-broncos",
+        "kicker": "NFL",
         "stats": [
-            ("4th", "Straight title Italy is chasing, without Sinner"),
-            ("$1.5M", "Prize money for the champion nation"),
-            ("Nov. 29", "The final in Bologna, 3 p.m. local time"),
+            ("43", "Rodgers' age next week, in his 22nd and final season"),
+            ("86.6", "His passer rating this year, the lowest of his career"),
+            ("9–9–1", "Mason Rudolph's record as a starter"),
         ],
         "caption": (
-            "The Davis Cup Final 8 is underway in Bologna. Czechia and Canada opened it today, and hosts "
-            "Italy go for a fourth straight title without Jannik Sinner, who had knee surgery Tuesday.\n\n"
-            "Germany has world No. 1 Alexander Zverev, and Spain says Carlos Alcaraz will play, though he may "
-            "be rested early. The final is Sunday, Nov. 29.\n\n"
+            "The Steelers have benched Aaron Rodgers. Mason Rudolph starts Friday against Denver, and "
+            "Rodgers, who has said this is his last season, will be inactive.\n\n"
+            "Pittsburgh (6–4) has lost two straight, and Rodgers was sacked five times Sunday. "
+            "The team hasn't said how long Rudolph will start. Denver will be without J.K. Dobbins, "
+            "suspended one game.\n\n"
             "Full story from Sports Unc: link in bio.\n\n"
-            "#DavisCup #tennis #Alcaraz #Zverev #sportsunc"
+            "#steelers #aaronrodgers #NFL #broncos #sportsunc"
         ),
     },
     {
         "paper": "news",
-        "story": "s-who-h5n1-washington-dairy-workers-one-death",
-        "kicker": "Bird flu",
+        "story": "s-thanksgiving-coastal-storm-east-coast-wpc",
+        "kicker": "Weather",
         "stats": [
-            ("3", "Human H5N1 cases among Yakima County dairy workers"),
-            ("1", "Death, a patient with underlying conditions"),
-            ("75", "U.S. human H5 infections since February 2024, per CDC"),
+            ("50+ mph", "Gusts forecast along the coast; outages possible"),
+            ("1–4 in", "Rain in the Carolinas and the Mid-Atlantic"),
+            ("GA to NE", "Coastal flooding risk, Georgia up to the Northeast"),
         ],
         "caption": (
-            "The WHO reported three human H5N1 bird flu cases in Washington state, all adult dairy-farm "
-            "workers in Yakima County. One patient, who had underlying conditions, died Nov. 1; the other "
-            "two had mild illness.\n\n"
-            "The WHO says there's no evidence so far of person-to-person spread and rates the risk to the "
-            "general public as low.\n\n"
+            "A strong coastal storm is set to run up the East Coast through Thanksgiving Day. Forecasters "
+            "warn of coastal flooding from Georgia to the Northeast, gusts over 50 mph, 1 to 4 inches of "
+            "rain and possible power outages, with snow on the storm's western side.\n\n"
+            "Traveling or near the coast? Plan for delays and outages and follow local officials.\n\n"
             "Full story from News Unc: link in bio.\n\n"
-            "#birdflu #H5N1 #publichealth #Washington #newsunc"
+            "#thanksgiving #weather #eastcoast #storm #newsunc"
         ),
     },
     {
         "paper": "game",
-        "story": "s-verdict-nioh-3-steam-black-friday-35",
-        "kicker": "Buy, wait or skip",
+        "story": "s-console-price-cuts-2028-sp-global-dram",
+        "kicker": "Consoles",
         "stats": [
-            ("$34.99", "Nioh 3 on Steam, half its $69.99 list price"),
-            ("88", "OpenCritic score, tied for the series best"),
-            ("Jan. 28", "Xbox Complete Edition, with both DLCs"),
+            ("2028", "Earliest console price cuts, per S&P Global"),
+            ("184K", "DRAM wafers of capacity added by the end of this year"),
+            ("819K", "Added by the end of 2028, as AI buys up memory"),
         ],
         "caption": (
-            "Buy, wait or skip: Nioh 3 at $35 on Steam is a buy. Team Ninja's samurai slasher is half off on "
-            "PC, and it sits at 88 on OpenCritic, matching the first Nioh.\n\n"
-            "On Xbox? Wait for the Complete Edition with both DLCs on Jan. 28. Our call is based on the "
-            "reviews and the price; we haven't played it.\n\n"
+            "Waiting for a console price cut? Don't hold your breath. An S&P Global analyst says not before "
+            "2028, because AI data centers are buying up the memory chips consoles need.\n\n"
+            "Our read: today's prices are probably as good as the next year gets, so if a Black Friday bundle "
+            "has been tempting you, that's worth knowing. It's one forecast, not a promise from Sony, "
+            "Microsoft or Nintendo.\n\n"
             "Full story from Game Unc: link in bio.\n\n"
-            "#Nioh3 #SteamDeals #BlackFriday #TeamNinja #gameunc"
+            "#PS5 #Xbox #NintendoSwitch2 #blackfriday #gameunc"
         ),
     },
     {
         "paper": "finance",
-        "story": "s-williams-inflation-3-5-percent-actions-over-time",
-        "kicker": "The Fed",
+        "story": "s-fhfa-approves-fico-10t-fannie-freddie",
+        "kicker": "Credit scores",
         "stats": [
-            ("3.5%", "Inflation now, by Williams' estimate"),
-            ("2%", "The Fed's goal; he sees it reached in 2028"),
-            ("Dec. 9", "The Fed's next rate decision"),
+            ("10T", "The newer FICO model Fannie and Freddie will accept"),
+            ("Sept. 9", "When lenders could start using VantageScore 4.0"),
+            ("3", "Credit bureaus lenders must pull now; MBA wants that to end"),
         ],
         "caption": (
-            "New York Fed President John Williams says inflation is about 3.5%, well above the Fed's 2% goal, "
-            "and that the Fed \"must take actions over time\" to bring it down. Some read that as a hint at "
-            "higher rates; he didn't say so.\n\n"
-            "He pointed to the AI buildout pushing up chip prices. The Fed's next rate decision is Dec. 9.\n\n"
+            "Fannie Mae and Freddie Mac will accept FICO 10T, a newer credit score, on the mortgages they buy, "
+            "their regulator said Tuesday. No dates yet; it follows the rollout used for VantageScore 4.0.\n\n"
+            "For borrowers, nothing changes yet. Lenders pick which approved score to use, and your score can "
+            "differ by model. Check your reports free at AnnualCreditReport.com.\n\n"
             "Full story from Finance Unc: link in bio.\n\n"
-            "#FederalReserve #inflation #interestrates #economy #financeunc"
+            "#creditscore #mortgage #FICO #homebuying #financeunc"
         ),
     },
 ]
