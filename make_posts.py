@@ -62,7 +62,7 @@ PAPERS = {
 }
 
 # ---------------------------------------------------------------------- today
-DATE = "2026-11-25"
+DATE = "2026-11-26"
 
 # One entry per paper, in the order you'll post them (the page shows the last one first).
 # "story" is the id in that paper's edition file.
@@ -72,115 +72,114 @@ DATE = "2026-11-25"
 POSTS = [
     {
         "paper": "outdoor",
-        "story": "s-shenandoah-wildfire-closes-skyline-drive-appalachian-trail-nov-24",
-        "kicker": "Wildfire",
+        "story": "s-hawaii-extra-large-swell-kaena-point-closed-thanksgiving",
+        "kicker": "High surf",
         "stats": [
-            ("25 mi", "Of Skyline Drive closed, mile 79.5 to Rockfish Gap"),
-            ("4.2 mi", "Of the Appalachian Trail shut, Sawmill Run to Beagle Gap"),
-            ("Nov. 21", "Parkwide fire ban in force since, for very dry conditions"),
+            ("35\u201345 ft", "Surf on north-facing shores Thanksgiving morning"),
+            ("6", "Islands under the high surf warning, Niihau to the Big Island"),
+            ("Dec. 8", "When the Pipe Masters window opens at Pipeline"),
         ],
         "caption": (
-            "A wildfire has closed the south end of Skyline Drive in Shenandoah National Park, from the "
-            "Loft Mountain gate to Rockfish Gap, plus about four miles of the Appalachian Trail. "
-            "No reopening date yet.\n\n"
-            "The rest of the drive is open; heading south, leave the park at Swift Run Gap (U.S. 33). "
-            "A parkwide fire ban is in force, and you can get closure alerts by texting SHENALERTS to 888777.\n\n"
+            "An extra-large swell brought 35- to 45-foot surf to Hawaii's north shores on Thanksgiving morning. "
+            "A high surf warning runs until 6 a.m. Friday, and the state has closed the Keawa\u02bbula section of "
+            "Ka\u02bbena Point State Park on O\u02bbahu until Saturday morning.\n\n"
+            "The Weather Service says stay off the shoreline on affected coasts, don't drive through flooded roads, "
+            "and secure canoes and boats stored on beaches.\n\n"
             "Full story from Outdoor Unc: link in bio.\n\n"
-            "#shenandoah #skylinedrive #appalachiantrail #wildfire #outdoorunc"
+            "#hawaii #bigwaves #northshore #surf #outdoorunc"
         ),
     },
     {
         "paper": "fun",
-        "story": "s-macys-parade-100th-balloons-wind-decision-thursday",
-        "kicker": "Macy's Parade",
-        "focus": (0.5, 0.4),
+        "story": "s-norse-atlantic-suspends-all-flights-nov-26",
+        "kicker": "Airlines",
         "stats": [
-            ("100", "Inflatables, a record, for the parade's 100th"),
-            ("34 mph", "Gusts above this keep the big balloons low or grounded"),
-            ("8:30 a.m.", "Thursday start, Eastern; the wind call comes that morning"),
+            ("All", "Norse Atlantic flights suspended as of Thursday"),
+            ("MCO\u2013LGW", "Its only U.S. route right now, Orlando to London Gatwick"),
+            ("9", "Current or planned routes on hold, per Simple Flying"),
         ],
         "caption": (
-            "The Macy's Thanksgiving Day Parade turns 100 tomorrow with a record 100 inflatables, "
-            "including a new Bluey and Sorcerer's Apprentice Mickey. The catch: forecast gusts are right "
-            "around the 34 mph line that keeps the big balloons low or on the ground.\n\n"
-            "Macy's makes the call Thursday morning. In New York today? Balloon inflation is free, 1 to 6 p.m., "
-            "entry at West 72nd and Columbus.\n\n"
+            "Norse Atlantic has stopped flying. The budget airline suspended every flight Thursday and says it will "
+            "file for bankruptcy unless money turns up fast. Its only U.S. route right now is Orlando to London Gatwick.\n\n"
+            "Holding a ticket? Don't go to the airport. Rebook on another airline today, keep every receipt, then call "
+            "your card company about a chargeback and check your travel insurance.\n\n"
             "Full story from Fun Unc: link in bio.\n\n"
-            "#macysparade #thanksgiving #nyc #macysthanksgivingdayparade #fununc"
+            "#norseatlantic #travelnews #traveltips #orlando #fununc"
         ),
     },
     {
         "paper": "sports",
-        "story": "s-steelers-bench-aaron-rodgers-mason-rudolph-broncos",
-        "kicker": "NFL",
+        "story": "s-cfp-rankings-nov-24-texas-notre-dame-move-into-top-four",
+        "edition": "2026-11-25-sports.json",
+        "kicker": "College football",
         "stats": [
-            ("43", "Rodgers' age next week, in his 22nd and final season"),
-            ("86.6", "His passer rating this year, the lowest of his career"),
-            ("9–9–1", "Mason Rudolph's record as a starter"),
+            ("No. 3", "Texas, up from fifth"),
+            ("No. 4", "Notre Dame, up from sixth"),
+            ("Dec. 6", "Selection Sunday for the 12-team field"),
         ],
         "caption": (
-            "The Steelers have benched Aaron Rodgers. Mason Rudolph starts Friday against Denver, and "
-            "Rodgers, who has said this is his last season, will be inactive.\n\n"
-            "Pittsburgh (6–4) has lost two straight, and Rodgers was sacked five times Sunday. "
-            "The team hasn't said how long Rudolph will start. Denver will be without J.K. Dobbins, "
-            "suspended one game.\n\n"
+            "Texas and Notre Dame are in the College Football Playoff's top four. Georgia and unbeaten Utah hold "
+            "the top two spots, while Alabama fell to sixth and UCLA to ninth after an upset-filled weekend.\n\n"
+            "The top four get first-round byes. Next rankings: Tuesday, Dec. 1, after rivalry weekend. "
+            "The field is picked Sunday, Dec. 6.\n\n"
             "Full story from Sports Unc: link in bio.\n\n"
-            "#steelers #aaronrodgers #NFL #broncos #sportsunc"
+            "#CFB #collegefootball #CFP #hookem #sportsunc"
         ),
     },
     {
         "paper": "news",
-        "story": "s-thanksgiving-coastal-storm-east-coast-wpc",
-        "kicker": "Weather",
+        "story": "s-congo-ebola-tops-12000-cases-fighting",
+        "kicker": "Ebola",
         "stats": [
-            ("50+ mph", "Gusts forecast along the coast; outages possible"),
-            ("1–4 in", "Rain in the Carolinas and the Mid-Atlantic"),
-            ("GA to NE", "Coastal flooding risk, Georgia up to the Northeast"),
+            ("12,021", "Confirmed cases in eastern Congo, per its Health Ministry"),
+            ("5,678", "Deaths WHO had counted as of Nov. 17"),
+            ("0", "Approved vaccines or treatments for this strain"),
         ],
         "caption": (
-            "A strong coastal storm is set to run up the East Coast through Thanksgiving Day. Forecasters "
-            "warn of coastal flooding from Georgia to the Northeast, gusts over 50 mph, 1 to 4 inches of "
-            "rain and possible power outages, with snow on the storm's western side.\n\n"
-            "Traveling or near the coast? Plan for delays and outages and follow local officials.\n\n"
+            "Congo's Ebola outbreak has passed 12,000 confirmed cases, and nearly half of those infected have died. "
+            "The AP calls it the fastest-growing Ebola outbreak on record.\n\n"
+            "There's no approved vaccine or treatment for this strain, and renewed fighting near the response hub "
+            "of Bunia is keeping teams from some communities. WHO staff were trapped in a hospital for three days.\n\n"
             "Full story from News Unc: link in bio.\n\n"
-            "#thanksgiving #weather #eastcoast #storm #newsunc"
+            "#ebola #congo #publichealth #WHO #newsunc"
         ),
     },
     {
         "paper": "game",
-        "story": "s-console-price-cuts-2028-sp-global-dram",
-        "kicker": "Consoles",
+        "story": "s-verdict-space-marine-2-steam-15",
+        "kicker": "Buy, wait or skip",
+        "headline": "Space Marine 2 at $14.99 on Steam Is a Buy",
         "stats": [
-            ("2028", "Earliest console price cuts, per S&P Global"),
-            ("184K", "DRAM wafers of capacity added by the end of this year"),
-            ("819K", "Added by the end of 2028, as AI buys up memory"),
+            ("$14.99", "On Steam, 75% off $59.99"),
+            ("82", "Metacritic score on PC, from 60 reviews"),
+            ("6", "Heroic weapons added in this week's Patch 16"),
         ],
         "caption": (
-            "Waiting for a console price cut? Don't hold your breath. An S&P Global analyst says not before "
-            "2028, because AI data centers are buying up the memory chips consoles need.\n\n"
-            "Our read: today's prices are probably as good as the next year gets, so if a Black Friday bundle "
-            "has been tempting you, that's worth knowing. It's one forecast, not a promise from Sony, "
-            "Microsoft or Nintendo.\n\n"
+            "Space Marine 2 is $14.99 on Steam, 75% off, the same week Patch 16 reworked the Vanguard and added "
+            "six Heroic weapons.\n\n"
+            "Our call, from the reviews and the price: buy it. At $15 it's an easy co-op night, and three more free "
+            "updates are on the way. Switch 2 owners will have to wait until 2027.\n\n"
             "Full story from Game Unc: link in bio.\n\n"
-            "#PS5 #Xbox #NintendoSwitch2 #blackfriday #gameunc"
+            "#spacemarine2 #warhammer40k #steamdeals #blackfriday #gameunc"
         ),
     },
     {
         "paper": "finance",
-        "story": "s-fhfa-approves-fico-10t-fannie-freddie",
-        "kicker": "Credit scores",
+        "story": "s-black-friday-scams-ny-ca-attorneys-general-2026",
+        "kicker": "Black Friday",
         "stats": [
-            ("10T", "The newer FICO model Fannie and Freddie will accept"),
-            ("Sept. 9", "When lenders could start using VantageScore 4.0"),
-            ("3", "Credit bureaus lenders must pull now; MBA wants that to end"),
+            ("Fake", "\"Original\" prices inflated to make a discount look bigger"),
+            ("PIN", "Check gift card PIN covers are intact, and keep the receipt"),
+            ("Credit", "Cards let you dispute a charge; debit, cash and wires don't"),
         ],
         "caption": (
-            "Fannie Mae and Freddie Mac will accept FICO 10T, a newer credit score, on the mortgages they buy, "
-            "their regulator said Tuesday. No dates yet; it follows the rollout used for VantageScore 4.0.\n\n"
-            "For borrowers, nothing changes yet. Lenders pick which approved score to use, and your score can "
-            "differ by model. Check your reports free at AnnualCreditReport.com.\n\n"
+            "Before Black Friday, the attorneys general of New York and California flagged the holiday shopping traps "
+            "they see most: fake markdowns from inflated \"original\" prices, phishing \"deals,\" drained gift cards and "
+            "buy now, pay later costs.\n\n"
+            "Their tips: compare prices, check that gift card PIN covers are intact, pay by credit card so you can "
+            "dispute a charge, and shop logged out in a private window to spot personalized pricing.\n\n"
             "Full story from Finance Unc: link in bio.\n\n"
-            "#creditscore #mortgage #FICO #homebuying #financeunc"
+            "#blackfriday #cybermonday #scamalert #shoppingtips #financeunc"
         ),
     },
 ]
