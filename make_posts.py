@@ -62,7 +62,7 @@ PAPERS = {
 }
 
 # ---------------------------------------------------------------------- today
-DATE = "2026-11-26"
+DATE = "2026-11-27"
 
 # One entry per paper, in the order you'll post them (the page shows the last one first).
 # "story" is the id in that paper's edition file.
@@ -72,114 +72,113 @@ DATE = "2026-11-26"
 POSTS = [
     {
         "paper": "outdoor",
-        "story": "s-hawaii-extra-large-swell-kaena-point-closed-thanksgiving",
-        "kicker": "High surf",
+        "story": "s-storm-warnings-tetons-colorado-park-range-rabbit-ears-nov-27",
+        "kicker": "Winter storm",
         "stats": [
-            ("35\u201345 ft", "Surf on north-facing shores Thanksgiving morning"),
-            ("6", "Islands under the high surf warning, Niihau to the Big Island"),
-            ("Dec. 8", "When the Pipe Masters window opens at Pipeline"),
+            ("10\u201318 in.", "Snow in western Wyoming's high country by Saturday 11 a.m."),
+            ("8\u201315 in.", "On Rabbit Ears Pass, Friday night to Saturday night"),
+            ("65 mph", "Top gusts forecast in Wyoming's Snowy Range"),
         ],
         "caption": (
-            "An extra-large swell brought 35- to 45-foot surf to Hawaii's north shores on Thanksgiving morning. "
-            "A high surf warning runs until 6 a.m. Friday, and the state has closed the Keawa\u02bbula section of "
-            "Ka\u02bbena Point State Park on O\u02bbahu until Saturday morning.\n\n"
-            "The Weather Service says stay off the shoreline on affected coasts, don't drive through flooded roads, "
-            "and secure canoes and boats stored on beaches.\n\n"
+            "The Weather Service raised its snow forecast for the Tetons to 10 to 18 inches and upgraded northern "
+            "Colorado's Park Range and Rabbit Ears Pass to winter storm warnings, right as Steamboat's season opens.\n\n"
+            "Driving? Check WYDOT 511 for Teton and Togwotee passes and COtrip for Rabbit Ears. Heading into the "
+            "backcountry? Read the avalanche forecast first: heavy snow on strong wind builds fresh slabs.\n\n"
             "Full story from Outdoor Unc: link in bio.\n\n"
-            "#hawaii #bigwaves #northshore #surf #outdoorunc"
+            "#tetons #jacksonhole #steamboat #winterstorm #outdoorunc"
         ),
     },
     {
         "paper": "fun",
-        "story": "s-norse-atlantic-suspends-all-flights-nov-26",
-        "kicker": "Airlines",
+        "story": "s-southwest-companion-pass-black-friday-book-by-nov-29",
+        "kicker": "Black Friday deal",
         "stats": [
-            ("All", "Norse Atlantic flights suspended as of Thursday"),
-            ("MCO\u2013LGW", "Its only U.S. route right now, Orlando to London Gatwick"),
-            ("9", "Current or planned routes on hold, per Simple Flying"),
+            ("Nov. 29", "Book one qualifying round trip by Sunday"),
+            ("Jan. 5", "Fly that trip by this date, no blackouts"),
+            ("Jan. 8\u2013Mar. 3", "Your companion flies free, taxes from $5.60 each way"),
         ],
         "caption": (
-            "Norse Atlantic has stopped flying. The budget airline suspended every flight Thursday and says it will "
-            "file for bankruptcy unless money turns up fast. Its only U.S. route right now is Orlando to London Gatwick.\n\n"
-            "Holding a ticket? Don't go to the airport. Rebook on another airline today, keep every receipt, then call "
-            "your card company about a chargeback and check your travel insurance.\n\n"
+            "Southwest's Black Friday offer: book one qualifying round trip (or two one-ways) by Sunday, Nov. 29, "
+            "fly it by Jan. 5, and earn a Companion Pass. Your plus-one then flies free, taxes and fees only, "
+            "Jan. 8 through March 3.\n\n"
+            "The catch: register on Southwest's promotion page before you book, not after. Screenshot the confirmation.\n\n"
             "Full story from Fun Unc: link in bio.\n\n"
-            "#norseatlantic #travelnews #traveltips #orlando #fununc"
+            "#southwestairlines #companionpass #blackfriday #traveldeals #fununc"
         ),
     },
     {
         "paper": "sports",
-        "story": "s-cfp-rankings-nov-24-texas-notre-dame-move-into-top-four",
+        "story": "s-steelers-release-aaron-rodgers-after-mcafee-show",
         "edition": "2026-11-25-sports.json",
-        "kicker": "College football",
+        "kicker": "NFL",
         "stats": [
-            ("No. 3", "Texas, up from fifth"),
-            ("No. 4", "Notre Dame, up from sixth"),
-            ("Dec. 6", "Selection Sunday for the 12-team field"),
+            ("42", "Rodgers's age"),
+            ("$8.6M", "Guaranteed salary he's still owed this season, per ESPN"),
+            ("6\u20134", "Steelers' record, holding the AFC's last playoff spot"),
         ],
         "caption": (
-            "Texas and Notre Dame are in the College Football Playoff's top four. Georgia and unbeaten Utah hold "
-            "the top two spots, while Alabama fell to sixth and UCLA to ninth after an upset-filled weekend.\n\n"
-            "The top four get first-round byes. Next rankings: Tuesday, Dec. 1, after rivalry weekend. "
-            "The field is picked Sunday, Dec. 6.\n\n"
+            "The Steelers are waiving Aaron Rodgers, hours after he criticized coach Mike McCarthy on The Pat McAfee "
+            "Show and said of Pittsburgh, \"That ship has sailed.\"\n\n"
+            "Mason Rudolph starts tonight against Denver. Rodgers is owed $8.6 million in guaranteed salary for the "
+            "rest of the season, which makes a waiver claim unlikely.\n\n"
             "Full story from Sports Unc: link in bio.\n\n"
-            "#CFB #collegefootball #CFP #hookem #sportsunc"
+            "#steelers #aaronrodgers #NFL #herewego #sportsunc"
         ),
     },
     {
         "paper": "news",
-        "story": "s-congo-ebola-tops-12000-cases-fighting",
-        "kicker": "Ebola",
+        "story": "s-congress-sends-lithium-ion-battery-safety-bill-to-trump",
+        "kicker": "Public safety",
         "stats": [
-            ("12,021", "Confirmed cases in eastern Congo, per its Health Ministry"),
-            ("5,678", "Deaths WHO had counted as of Nov. 17"),
-            ("0", "Approved vaccines or treatments for this strain"),
+            ("365\u201342", "House vote on the battery safety bill"),
+            ("180 days", "For the CPSC to make UL battery standards mandatory"),
+            ("4", "Family members killed in an Oct. 28 e-bike fire in the Bronx"),
         ],
         "caption": (
-            "Congo's Ebola outbreak has passed 12,000 confirmed cases, and nearly half of those infected have died. "
-            "The AP calls it the fastest-growing Ebola outbreak on record.\n\n"
-            "There's no approved vaccine or treatment for this strain, and renewed fighting near the response hub "
-            "of Bunia is keeping teams from some communities. WHO staff were trapped in a hospital for three days.\n\n"
+            "A bill to make safety standards for e-bike and e-scooter batteries mandatory nationwide is headed to "
+            "President Trump. The Senate passed it unanimously; the House passed it 365-42.\n\n"
+            "It would give the Consumer Product Safety Commission 180 days to turn three widely used UL standards "
+            "into federal rules. Certification doesn't make a battery fireproof: damage, bad repairs and mismatched "
+            "chargers are still hazards.\n\n"
             "Full story from News Unc: link in bio.\n\n"
-            "#ebola #congo #publichealth #WHO #newsunc"
+            "#ebike #escooter #firesafety #congress #newsunc"
         ),
     },
     {
         "paper": "game",
-        "story": "s-verdict-space-marine-2-steam-15",
-        "kicker": "Buy, wait or skip",
-        "headline": "Space Marine 2 at $14.99 on Steam Is a Buy",
+        "story": "s-simpsons-hit-and-run-remake-new-radical-cancelled",
+        "kicker": "Cancelled?",
         "stats": [
-            ("$14.99", "On Steam, 75% off $59.99"),
-            ("82", "Metacritic score on PC, from 60 reviews"),
-            ("6", "Heroic weapons added in this week's Patch 16"),
+            ("2003", "When The Simpsons: Hit & Run came out"),
+            ("1", "Unannounced New Radical Games project, now scrapped"),
+            ("0", "Times the game is named. Treat it as a strong hint, not proof"),
         ],
         "caption": (
-            "Space Marine 2 is $14.99 on Steam, 75% off, the same week Patch 16 reworked the Vanguard and added "
-            "six Heroic weapons.\n\n"
-            "Our call, from the reviews and the price: buy it. At $15 it's an easy co-op night, and three more free "
-            "updates are on the way. Switch 2 owners will have to wait until 2027.\n\n"
+            "A New Radical Games designer says the studio's unannounced project was cancelled, and his goodbye post "
+            "is stuffed with Simpsons jokes. New Radical, the old Radical Entertainment, has had Hit & Run art on its "
+            "homepage all year.\n\n"
+            "He never names the game, so treat it as a strong hint, not proof. Somebody, let Homer drive the pink "
+            "sedan through Springfield again.\n\n"
             "Full story from Game Unc: link in bio.\n\n"
-            "#spacemarine2 #warhammer40k #steamdeals #blackfriday #gameunc"
+            "#thesimpsons #hitandrun #retrogaming #gamingnews #gameunc"
         ),
     },
     {
         "paper": "finance",
-        "story": "s-black-friday-scams-ny-ca-attorneys-general-2026",
-        "kicker": "Black Friday",
+        "story": "s-goods-trade-deficit-october-2026-149-5-billion",
+        "kicker": "Trade",
         "stats": [
-            ("Fake", "\"Original\" prices inflated to make a discount look bigger"),
-            ("PIN", "Check gift card PIN covers are intact, and keep the receipt"),
-            ("Credit", "Cards let you dispute a charge; debit, cash and wires don't"),
+            ("$149.5B", "October goods trade deficit, up from $135.1B"),
+            ("+8.5%", "Capital goods imports in a month, up 80% from a year ago"),
+            ("2x+", "The deficit compared with October 2025's $61.4B"),
         ],
         "caption": (
-            "Before Black Friday, the attorneys general of New York and California flagged the holiday shopping traps "
-            "they see most: fake markdowns from inflated \"original\" prices, phishing \"deals,\" drained gift cards and "
-            "buy now, pay later costs.\n\n"
-            "Their tips: compare prices, check that gift card PIN covers are intact, pay by credit card so you can "
-            "dispute a charge, and shop logged out in a private window to spot personalized pricing.\n\n"
+            "The U.S. goods trade deficit widened to $149.5 billion in October, more than double a year earlier, "
+            "Census said Friday. Imports jumped 6.1%, led by machinery, computers and other capital goods.\n\n"
+            "Stores and wholesalers also stocked up ahead of the holidays, with inventories up nearly 1%. These are "
+            "early estimates; the full report comes later.\n\n"
             "Full story from Finance Unc: link in bio.\n\n"
-            "#blackfriday #cybermonday #scamalert #shoppingtips #financeunc"
+            "#economy #trade #tradedeficit #imports #financeunc"
         ),
     },
 ]
